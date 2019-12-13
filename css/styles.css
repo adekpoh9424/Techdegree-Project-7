@@ -1,0 +1,82 @@
+*{
+    text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    margin: 0 auto;
+}
+
+/**
+header and navigation styling**/
+
+h1, h3 {
+    color: gray;
+    margin-left: 18px;
+}
+
+.myBell {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    transition: transform 1s;
+}
+
+.myBell:hover {
+    transform: rotate (20deg);
+}
+
+.myBell-border {
+    border: 1px solid #ffebcd07;
+}
+
+.myPic img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; 
+    transition: transform 1s;
+}
+
+/** nav bar and img styling**/
+
+.icon-svg {
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+}
+/*
+.main-header {
+    display: flex;
+    justify-content: space-between;
+}
+*/
+input:focus, select:focus, textarea:focus {
+    border: .5px solid rgb(12, 21, 49);
+    outline: 0;
+    background: #cce6ea
+}
+
+/*
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "main-header", "navigation", "main";
+}
+
+.main-header{
+    grid-area: header;
+    background-color: rgb(119, 71, 119);
+    display: flex;
+    flex-direction: row;
+    margin: auto 0;
+    color: white;
+    padding: 0 10px;
+}
+*/
+
+
