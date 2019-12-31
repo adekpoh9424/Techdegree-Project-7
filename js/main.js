@@ -53,7 +53,7 @@ let monthData = {
 let trafficOptions = {
     responsive: true,
     aspectRatio: 2.5,
-    animation {
+    animation: {
         duration: 0
     },
     scales: {
