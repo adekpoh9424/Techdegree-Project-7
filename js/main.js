@@ -43,7 +43,7 @@ let weeklyData = {
 };
 
 let monthData = {
-    labels ['Jan', 'Feb', 'Mar','Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: ['Jan', 'Feb', 'Mar','Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     datasets: [{data: [1145, 718, 4595, 1003, 1010, 236, 900, 1851, 05, 14525, 1140, 800, 1070, 809, 500],
     
    backgroundColor: 'rgba(116, 119, 191, .3)', 
@@ -68,7 +68,7 @@ let trafficOptions = {
     }
 };
 
-let trafficChart = new CharacterData(trafficCanvas, {
+let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
     data: dayData,
     options: trafficOptions
@@ -148,7 +148,7 @@ let mobileChart = new Chart(mobileCanvas, {
 
 const user = document.getElementById('userField');
 const message = document.getElementById('MessageField');
-const send = document.getElementById('sendField');
+const send = document.getElementById('send');
 
 send.addEventListener('click', () => {
     if (user.value === '' && message.value === '') {
