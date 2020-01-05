@@ -1,3 +1,5 @@
+
+
 @charset "UTF-8";
 
 /*
@@ -6,7 +8,7 @@
 
 *
 
-* Ionuț Colceriu - ghinda.net
+* Ionu? Colceriu - ghinda.net
 
 * https://github.com/ghinda/css-toggle-switch
 
@@ -58,15 +60,7 @@
 
     position: relative;
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content:flex-end;
-
-    margin-right: 150px;
-
-    padding: 15px 0;
+    display: block;
 
     /* simulate default browser focus outlines on the switch,
 
@@ -156,9 +150,7 @@
 
   .switch-light strong {
 
-    font-weight: inherit;
-
-    margin-right: auto; }
+    font-weight: inherit; }
 
   .switch-light > span {
 
@@ -560,7 +552,7 @@
 
     display: block;
 
-    width: 25%;
+    width: 100%;
 
     height: 2em;
 
@@ -578,7 +570,7 @@
 
     left: 0;
 
-    width: 75%;
+    width: 100%;
 
     opacity: 0;
 
@@ -602,15 +594,15 @@
 
     left: 100%;
 
-    border-color: #D8D9DB;
+    border-color: #4BD865;
 
     margin-left: -2em; }
 
   .switch-ios.switch-light input:checked ~ span {
 
-    border-color: #7477BF;
+    border-color: #4BD865;
 
-    box-shadow: inset 0 0 0 30px #7477BF; }
+    box-shadow: inset 0 0 0 30px #4BD865; }
 
   .switch-ios.switch-light input:checked ~ span span:first-of-type {
 
@@ -632,7 +624,7 @@
 
     .switch-ios.switch-toggle a {
 
-      background-color: #7477BF;
+      background-color: #4BD865;
 
       border: 0.125em solid #D8D9DB;
 
@@ -993,3 +985,5 @@
 
 
 /*# sourceMappingURL=toggle-switch.css.map */
+
+
