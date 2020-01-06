@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WebApp Dashboards</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/toggle-switch.css">
+    <link rel="stylesheet" href="css/toggle.css">
     <link rel="stylesheet" href="css/normalize.css">
 </head>
 
@@ -303,29 +303,30 @@
     <h3>Settings</h3>
     <div class="container-settings">
         <div class="the-switch">
-            <label class="toggle">
+            <label class="switch-light switch-candy" onclick="">
                 <input type="checkbox">
                 <strong>
-                    Send Email Notifications
+                  Send Email Notifications
                 </strong>
-
                 <span>
-                    <span>OFF</span>
-                    <span>ON</span>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
                 </span>
-            </label>
+              </label>
 
-            <label class="toggle">
+
+              <label class="switch-light switch-candy" onclick="">
                 <input type="checkbox">
                 <strong>
-                    Set Profile to Public
+                  Set Profile To Public
                 </strong>
-
                 <span>
-                    <span>OFF</span>
-                    <span>ON</span>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
                 </span>
-            </label>
+              </label>
         </div>
 
         <select class="form-field" id="timezone">
@@ -338,7 +339,7 @@
 
         <div class="settings-button">
             <button class="button-primary" id="save">Save</button>
-            <button class="button-disabled" id="cancel"></button>
+            <button class="button-disabled" id="cancel">Cancel</button>
         </div>
     </div>
 </section>

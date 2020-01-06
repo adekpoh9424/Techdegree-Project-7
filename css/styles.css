@@ -531,3 +531,19 @@ a {
         border-right: none;
     }
 }
+
+@media(min-width:968px){
+
+    .grid-container{
+
+      grid-template-areas: 
+
+        "header header header" 
+
+        "nav main main"
+
+        "nav main main"
+
+    }
+
+  }
