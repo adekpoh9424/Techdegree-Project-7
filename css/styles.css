@@ -265,7 +265,7 @@ main {
     border-radius: 5px;
     align-items: center;
     justify-content: space-between;
-    width: 28%;
+    width: 80%;
     margin: 15px auto;
     background-color: rgb(247, 247, 247);
     padding: 0 15px;
@@ -475,6 +475,7 @@ a {
         "header header"
         "nav main";
     }
+
     .main {
         grid-template-columns: 50%;
     }
@@ -496,6 +497,7 @@ a {
     .settings {
         grid-column: 2 / span 1;
     }
+    
     .widget-container-full {
         width: 90vw;
     }
@@ -515,9 +517,10 @@ a {
         display: flex;
         justify-content: space-evenly;
     }
-    .twitter,
-    .facebook,
-    .google {
+    
+    .twitter-container,
+    .facebook-container,
+    .google-container {
         display: flex;
         align-items: center;
         justify-content: space-evenly;

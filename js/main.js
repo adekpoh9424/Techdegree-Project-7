@@ -74,8 +74,8 @@ let trafficOptions = {
 };
 
 var chartData = hourlyData;
-var items = ul.getElementById('traffic-nav');
-var items = ul.getElementByTagName('li');
+var ul = document.getElementById('traffic-nav');
+var items = ul.getElementsByTagName('li');
 for (var i  = 0; i < items.length; ++i) {
     console.log('for looping:'+ items [i].textContent);
     items[0].style.backgroundColor = "green";
@@ -97,7 +97,7 @@ items[1].addEventListener('click', (e) => {
     items[1].style.backgroundColor = "green";
     items[2].style.backgroundColor = "white";
     items[3].style.backgroundColor = "white";
-    chartData=dailyData;
+    chartData=dailyData1;
     updateChart();
 });
 
@@ -133,7 +133,7 @@ updateChart();
 
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
-    data: dayData,
+    data: dailyData,
     options: trafficOptions
 });
 
@@ -141,7 +141,7 @@ let trafficChart = new Chart(trafficCanvas, {
 
 const dailyCanvas = document.getElementById('daily-chart');
 
-const dailyData = {
+const dailyData2 = {
     labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
     datasets: [{
         label: '# of Hits',
