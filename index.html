@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WebApp Dashboards</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/toggle.css">
+    <link rel="stylesheet" href="css/toggle-switch.css">
     <link rel="stylesheet" href="css/normalize.css">
 </head>
 
@@ -47,10 +47,10 @@
 <!--sidebar navigation-->
 
 <nav class='nav-bar'>
-    <img class="icon-svg" src="icons/icon-dashboard.svg" alt="Dashboard">
-    <img class="icon-svg" src="icons/icon-members.svg" alt="Member">
-    <img class="icon-svg" src="icons/icon-visits.svg" alt="Visit">
-    <img class="icon-svg" src="icons/icon-settings.svg" alt="Setting">
+    <a class="nav-link" href="#"><img class="icon-svg" src="icons/icon-dashboard.svg" alt="Dashboard"></a>
+    <a href="#"><img class="icon-svg" src="icons/icon-members.svg" alt="Member"></a>
+    <a href="#"></a><img class="icon-svg" src="icons/icon-visits.svg" alt="Visit"></a>
+    <a href="#"></a><img class="icon-svg" src="icons/icon-settings.svg" alt="Setting"></a>
 </nav>
 
 <!--end sidebar navigation-->
@@ -89,7 +89,7 @@
     <div class="traffic-header">
         <h3 class="traffic-name">Traffic</h3>
 
-        <ul class="traffic-nav">
+        <ul class="traffic-nav" id="traffic-nav">
             <li class="traffic-nav-link">Hourly</li>
             <li class="traffic-nav-link">Daily</li>
             <li class="traffic-nav-link active">Weekly</li>
@@ -302,33 +302,26 @@
 <section class="settings">
     <h3>Settings</h3>
     <div class="container-settings">
-        <div class="the-switch">
-            <label class="switch-light switch-candy" onclick="">
-                <input type="checkbox">
-                <strong>
-                  Send Email Notifications
-                </strong>
-                <span>
-                  <span>Off</span>
-                  <span>On</span>
-                  <a></a>
-                </span>
-              </label>
-
-
-              <label class="switch-light switch-candy" onclick="">
-                <input type="checkbox">
-                <strong>
-                  Set Profile To Public
-                </strong>
-                <span>
-                  <span>Off</span>
-                  <span>On</span>
-                  <a></a>
-                </span>
-              </label>
+         <div class="setting-1">
+        <label class="switch-light">
+            <input type="checkbox">
+            <span class="slider round"></span>
+            <strong class="send-it">
+                Send Email notifications
+            </strong>
+        </label>
+    </div>
+     <div class="setting-2">
+        <label class="switch-light">
+            <input type="checkbox">
+            <span class="slider round"></span>
+            <strong class="set-it">
+                Set Profile to Public
+            </strong>
+        </label>
+    </div>
         </div>
-
+    <div class="run">
         <select class="form-field" id="timezone">
             <option disabled selected> Select a Timezone</option>
             <option>Eastern</option>
@@ -336,7 +329,7 @@
             <option>Mountain</option>
             <option>Pacific</option>
         </select>
-
+    </div>
         <div class="settings-button">
             <button class="button-primary" id="save">Save</button>
             <button class="button-disabled" id="cancel">Cancel</button>

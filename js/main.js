@@ -1,3 +1,7 @@
+//const trafficNav = document.getElementsByClassName('traffic-nav-link');
+//const chartSelector = document.getElementById('traffic-nav');
+
+
 const alertBanner = document.getElementById('alert');
 
 alertBanner.innerHTML =
@@ -14,28 +18,12 @@ alertBanner.addEventListener('click', e => {
     }
 });
 
-//Message
 
-const user = document.getElementById("userField");
-const message = document.getElementById("messageField");
-const send = document.getElementById("send");
-
-send.addEventListener('click', () => {
-    if (user.value === "" && message.value === "") {
-    alert("Please fill out user and message fields before sending");
-    } else if (user.value === "" ) {
-    alert("Please fill out user field before sending");
-    } else if (message.value === "" ) {
-    alert("Please fill out message field before sending");
-    } else {
-    alert(`Message successfully sent to: ${user.value}`);
-    }
-});
 //Traffic Chart
 
 const trafficCanvas = document.getElementById('traffic-chart');
 
-let hourData = {
+let hourlyData = {
     labels: ['2', '4', '6','8', '10', '12', '14', '16', '18', '20', '22', '24'],
     datasets: [{data: [45, 78, 95, 03, 10, 36, 90, 11, 05, 15, 110, 6, 17, 89, 50],
     
@@ -43,7 +31,7 @@ let hourData = {
    borderWidth: 1, }],
 };
 
-let dayData = {
+let dailyData = {
     labels: ['02', '04', '06','08', '10', '12', '14', '16', '18', '20', '22', '24', '31'],
     datasets: [{data: [45, 70, 100, 120, 130, 360, 900, 1500, 2560, 15, 110, 6000, 170, 1780, 6800],
     
@@ -59,7 +47,7 @@ let weeklyData = {
    borderWidth: 1, }],
 };
 
-let monthData = {
+let monthlyData = {
     labels: ['Jan', 'Feb', 'Mar','Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     datasets: [{data: [1145, 718, 4595, 1003, 1010, 236, 900, 1851, 05, 14525, 1140, 800, 1070, 809, 500],
     
@@ -84,6 +72,64 @@ let trafficOptions = {
         display: false
     }
 };
+
+var chartData = hourlyData;
+var items = ul.getElementById('traffic-nav');
+var items = ul.getElementByTagName('li');
+for (var i  = 0; i < items.length; ++i) {
+    console.log('for looping:'+ items [i].textContent);
+    items[0].style.backgroundColor = "green";
+}
+
+items[0].addEventListener('click', (e) => {
+    console.log("Button Pressed: "+ items[0].textContent);
+    items[0].style.backgroundColor = "green";
+    items[1].style.backgroundColor = "white";
+    items[2].style.backgroundColor = "white";
+    items[3].style.backgroundColor = "white";
+    chartData=hourlyData;
+    updateChart();
+});
+
+items[1].addEventListener('click', (e) => {
+    console.log("Button Pressed: "+ items[1].textContent);
+    items[0].style.backgroundColor = "white";
+    items[1].style.backgroundColor = "green";
+    items[2].style.backgroundColor = "white";
+    items[3].style.backgroundColor = "white";
+    chartData=dailyData;
+    updateChart();
+});
+
+items[2].addEventListener('click', (e) => {
+    console.log("Button Pressed: "+ items[2].textContent);
+    items[0].style.backgroundColor = "white";
+    items[1].style.backgroundColor = "white";
+    items[2].style.backgroundColor = "green";
+    items[3].style.backgroundColor = "white";
+    chartData=weeklyData;
+    updateChart();
+});
+
+items[3].addEventListener('click', (e) => {
+    console.log("Button Pressed: "+ items[3].textContent);
+    items[0].style.backgroundColor = "white";
+    items[1].style.backgroundColor = "white";
+    items[2].style.backgroundColor = "white";
+    items[3].style.backgroundColor = "green";
+    chartData=monthlyData;
+    updateChart();
+});
+
+function updateChart(){
+    let trafficChart = new Chart(trafficCanvas, {
+        type: 'line',
+        data: chartData,
+        options: trafficOptions
+    });
+}
+updateChart();
+
 
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
@@ -176,3 +222,4 @@ send.addEventListener('click', () => {
         alert(`Message successfully sent to: ${user.value}`);
     }
 });
+

@@ -28,6 +28,11 @@ body {
     color: gray;
     margin-left: 15px;
 }
+
+h3 {
+    text-decoration: underline;
+    text-decoration-color: #7477BF;
+}
 img {
     height: 50px;
     width: 50px;
@@ -63,6 +68,7 @@ img {
     padding-right: 10px;
     color: white;
     left: 5px;
+    text-decoration: none;
 }
 .members img,
 .recent-activities img {
@@ -155,6 +161,7 @@ input:focus, select:focus, textarea:focus {
     color: gray;
     padding-left: 40px;
 }
+
 
 .traffic {
     border-bottom: 1px solid lightgray;
