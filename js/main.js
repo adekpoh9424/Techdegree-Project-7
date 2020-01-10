@@ -14,7 +14,7 @@ alertBanner.innerHTML =
 alertBanner.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains('alert-banner-close')) {
-        alert.style.display = 'none';
+        alertBanner.style.display = 'none';
     }
 });
 
@@ -217,6 +217,8 @@ send.addEventListener('click', () => {
     if (user.value === '' && message.value === '') {
         alert('Please fill out user and message fields before sending');
     } else if (user.value === '') {
+        alert('Please fill out user field before sending');
+    } else if (message.value == '') {
         alert('Please fill out message field before sending');
     } else {
         alert(`Message successfully sent to: ${user.value}`);

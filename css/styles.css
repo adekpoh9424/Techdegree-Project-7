@@ -48,7 +48,7 @@ img {
 }
 
 .myBell:hover {
-    transform: rotate (20deg);
+    transform: rotate(20deg);
 }
 
 .myBell {
@@ -556,4 +556,20 @@ a {
 
     }
 
+  }
+
+  @media(min-width:1024px) {
+
+     .container-settings {
+         margin-bottom: 15px;
+     }
+      .setting-2 {
+          margin-top: -15px;
+          
+      }
+      .setting-1 {
+          margin-top: -18px;
+      }
+    
+      
   }
