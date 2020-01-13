@@ -97,7 +97,7 @@ items[1].addEventListener('click', (e) => {
     items[1].style.backgroundColor = "green";
     items[2].style.backgroundColor = "white";
     items[3].style.backgroundColor = "white";
-    chartData=dailyData1;
+    chartData=dailyData;
     updateChart();
 });
 
@@ -216,6 +216,7 @@ const send = document.getElementById('send');
 send.addEventListener('click', () => {
     if (user.value === '' && message.value === '') {
         alert('Please fill out user and message fields before sending');
+
     } else if (user.value === '') {
         alert('Please fill out user field before sending');
     } else if (message.value == '') {
