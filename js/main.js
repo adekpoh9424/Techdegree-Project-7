@@ -210,7 +210,7 @@ let mobileChart = new Chart(mobileCanvas, {
 //User Search...
 
 const user = document.getElementById('userField');
-const message = document.getElementById('MessageField');
+const message = document.getElementById('messageField');
 const send = document.getElementById('send');
 
 send.addEventListener('click', () => {
